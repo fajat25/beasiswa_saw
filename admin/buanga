@@ -1,0 +1,12 @@
+<form method="POST" action="" class="form-inline">
+    <select name="Kat" class="form-control">
+        <?php
+                                        $query    =mysqli_query($conn, "select * from normalisasi GROUP BY id_beasiswa ORDER BY id_beasiswa");
+                                        while ($data = mysqli_fetch_array($query)) {
+                                        ?>
+        <option value="<?=$data['id_beasiswa'];?>"><?php echo $data['nama_beasiswa'];?>
+        </option>
+        <?php}?>
+        <input type="submit" class="btn btn-secondary ml-3" value="Pilih">
+        <a class="btn btn-secondary ml-3" href="Mexpor.php">Refresh</a>
+</form>

@@ -1,0 +1,4 @@
+.card-body .text-center {
+    overflow: hidden;
+    max-height: 300px; /* Sesuaikan dengan tinggi yang diinginkan */
+}
